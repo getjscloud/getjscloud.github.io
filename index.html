@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> </title>
+    <link rel="stylesheet" type="text/css" href="../webpage/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,900,300,100' rel='stylesheet' type='text/css'>
+    
+</head>
+
+<body onload="hljs.initHighlightingOnLoad();">
+    <div class="mainContainer">
+        <div class="toolbar">
+            <center class="toolbar">
+                <span class="logo"><img src="logoSmall.png" height="64px" width="64px" style="vertical-align:middle">      <strong>JS</strong>Cloud</span>
+                <span class="link"><a href="">Learn</a> <a href="" onclick="window.open('https://raw.githubusercontent.com/trvrsalom/JSCloud/master/web/jscloud.min.js'); window.open('https://raw.githubusercontent.com/trvrsalom/JSCloud/master/server/jscloud.php');">Use</a> <a href="">Contribute</a></span>
+            </center>
+        </div>
+        <br />
+        <center style="line-height: 60%; font-size: 64px; font-weight: lighter;"><strong>JS</strong>Cloud</span><br />
+        <span style="font-size: 32px;">A backend system for frontend designers.</span>
+        </center>
+        <br />
+        <div class="main" style="width: 725px; margin: 0 auto;">
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;html&gt;</span>
+    <span style="color: #f92672">&lt;head&gt;</span>
+        <span style="color: #f92672">&lt;title&gt;</span>JSCloud Demo<span style="color: #f92672">&lt;/title&gt;</span>
+        <span style="color: #f92672">&lt;script </span><span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;text/javascript&quot;</span> <span style="color: #a6e22e">src=</span><span style="color: #e6db74">&quot;https://code.jquery.com/jquery-2.1.3.min.js&quot;</span><span style="color: #f92672">&gt;&lt;/script&gt;</span>
+        <span style="color: #f92672">&lt;script </span><span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;text/javascript&quot;</span> <span style="color: #a6e22e">src=</span><span style="color: #e6db74">&quot;https://raw.githubusercontent.com/trvrsalom/JSCloud/master/web/jscloud.min.js&quot;</span><span style="color: #f92672">&gt;&lt;/script&gt;</span>
+    <span style="color: #f92672">&lt;/head&gt;</span>
+    <span style="color: #f92672">&lt;body&gt;</span>
+        <span style="color: #f92672">&lt;script </span><span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;text/javascript&quot;</span><span style="color: #f92672">&gt;</span>
+            <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">cloud</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #a6e22e">JSCloud</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;https://you.com/jscloud.php&quot;</span><span style="color: #f8f8f2">);</span>
+            <span style="color: #a6e22e">cloud</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">open</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;/data/data.json&quot;</span><span style="color: #f8f8f2">);</span>
+            <span style="color: #a6e22e">cloud</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">write</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;users&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;[&#39;johnsmith&#39;, &#39;mickey&#39;, &#39;oswin&#39;]&quot;</span><span style="color: #f8f8f2">);</span>
+            <span style="color: #a6e22e">cloud</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">write</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;supersecret&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;shhhh&quot;</span><span style="color: #f8f8f2">);</span>
+            <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">user</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">JSON</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">parse</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">cloud</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">read</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;users&quot;</span><span style="color: #f8f8f2">))[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">];</span>
+            <span style="color: #a6e22e">cloud</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">delete</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;supersecret&quot;</span><span style="color: #f8f8f2">);</span>
+        <span style="color: #f92672">&lt;/script&gt;</span>
+    <span style="color: #f92672">&lt;/body&gt;</span>
+<span style="color: #f92672">&lt;/html&gt;</span>
+</pre></div>
+        <center style="line-height: 60%; font-size: 64px; font-weight: lighter;">
+            <span style="font-size: 32px;">It's simple, fast, and easy.</span>
+        </center>
+        <center style="line-height: 60%; font-size: 64px; font-weight: lighter;">
+            <span style="font-size: 32px;">Oh. And it's free.</span>
+        </center>
+        </div>
+    </div>
+</body>
+
+</html>
