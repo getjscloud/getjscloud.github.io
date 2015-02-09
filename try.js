@@ -40,17 +40,9 @@ function tutorial() {
     }
     else if(step == 4) {
         step++;
-        return "Remember what I said about JSON? You can save a JSON/Arrays with a key.\nFor example: var x = [3, 2, 1, 2]\ncloud.write('nums', x)";
-    }
-    else if(step == 5) {
-        step++;
-        return "Now you can read it with cloud.read('nums')[2]";
-    }
-    else if(step == 6) {
-        step++;
         return "Of course, if you need to hide something from the NSA, \nyou can with cloud.delete('youtkey')";
     }
-    else if(step == 7) {
+    else if(step == 5) {
         step++;
         return "Anyways, thats the tutorial. We hope you enjoy JSCloud.\nIf you want to contribute or download, check out our github.\nIf you want to learn more use help();";
     }
