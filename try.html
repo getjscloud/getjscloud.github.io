@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Try JSCloud</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,900,300,100' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="try.js"></script>
+    <script type="text/javascript" src="jscloud.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="http://terminal.jcubic.pl/js/jquery.terminal-0.8.8.min.js"></script>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="toolbar">
+            <center class="toolbar">
+                <span class="logo"><img src="logoSmall.png" height="64px" width="64px" style="vertical-align:middle">      <strong>JS</strong>Cloud</span>
+                <span class="link"><a href="/try.html">Learn</a> <a href="https://raw.githubusercontent.com/trvrsalom/JSCloud/master/server/jscloud.php" onclick="window.open('https://raw.githubusercontent.com/trvrsalom/JSCloud/master/web/jscloud.min.js'); window.open('https://raw.githubusercontent.com/trvrsalom/JSCloud/master/server/jscloud.php');">Use</a> <a href="https://github.com/trvrsalom/JSCloud/tree/master">Contribute</a></span>
+            </center>
+        </div>
+        <br />
+        <center onclick="document.getElementsByClassName('clipboard')[0].style.width='99.5%';">
+            <div style="background: #272822;width:725px;overflow-y:scroll; overflow-x:wrap;height:100%;padding:.2em .6em; margin: 0px; padding: 0px; font-family: courier; text-align: left; color: #66d9ef; font-size: 16px;" id="term_demo"></div>
+        </center>
+    </div>
+    <script>
+        jQuery(function($, undefined) {
+            $('#term_demo').terminal(function(command, term) {
+                if (command !== '') {
+                    try {
+                        var result = window.eval(command);
+                        if (result !== undefined) {
+                            term.echo(new String(result));
+                        }
+                    } catch(e) {
+                        term.error(new String(e));
+                    }
+                } else {
+                   term.echo('');
+                }
+            }, {
+                greetings: "Type tutorial() to get started.",
+                name: 'jscloud_demo',
+                height: 300,
+                width: 725,
+                prompt: '> '});
+        });
+    </script>
+</body>
+
+</html>
