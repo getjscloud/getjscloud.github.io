@@ -24,7 +24,7 @@ function tutorial() {
 	if(step == 0) {
         cloud = new JSCloud('fakeserver.php');
         step++;
-		return "Welcome to JSCloud's tutorial. This is a javascript console.\nWhy don't you get started with:\nvar cloud = new JSCloud('Example_JSCloud_Server.php');\nIf you need free, temporary server hosting, we reccommend c9.io\nType 'tutorial()' to move to the next step.";
+		return "Welcome to JSCloud's tutorial. This is a javascript console.\nWhy don't you get started with:\nvar cloud = new JSCloud('Example_JSCloud_Server.php');\nIf you need free, temporary server hosting, we recommend c9.io\nType 'tutorial()' to move to the next step.";
     }
     else if(step == 1) {
         step++;
